@@ -2,7 +2,7 @@ package com.myqr.kotlinsorting
 
 public class BubbleSorting {
     /**
-     *  정수를 오름차순으로 정렬하는 함수
+     *  정수를 오름차순으로 버블정렬하는 함수
      *
      *  @param arr  정렬하고자하는 ArrayList<Int>배열
      *  @return 정렬된 ArrayList<Int> 반환
@@ -22,7 +22,7 @@ public class BubbleSorting {
     }
 
     /**
-     *  정수를 내림차순 정렬하는 함수
+     *  정수를 내림차순 버블정렬하는 함수
      *
      *  @param arr  정렬하고자하는 ArrayList<Int>배열
      *  @return 정렬된 ArrayList<Int> 반환
