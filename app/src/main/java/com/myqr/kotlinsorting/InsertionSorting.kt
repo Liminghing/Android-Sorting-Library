@@ -8,17 +8,19 @@ public class InsertionSorting {
      *  @return 정렬된 ArrayList<Int> 반환
      */
     public fun insertionSortingIntUp(arr :  ArrayList<Int>) :  ArrayList<Int> {
+        var i = 0
+        var j = 0
         var n = arr.size
         for (i in 1 until n){
             var key = arr[i]
-            for (j in 0 until (i-1) ){
-                if(arr[i] > key){
+            for (j in i-1 downTo 0 ){
+                if(arr[j] > key){
                     arr[j+1] = arr[j]
                 }else{
                     break
                 }
             }
-            arr[i] = key
+            arr[j+1] = key
         }
         return arr
     }
@@ -30,15 +32,19 @@ public class InsertionSorting {
      *  @return 정렬된 ArrayList<Int> 반환
      */
     public fun insertionSortingIntDown(arr :  ArrayList<Int>) :  ArrayList<Int> {
+        var i = 0
+        var j = 0
         var n = arr.size
-        for (i in 0 until n){
-            for (j in 0 until (n-1)){
-                if(arr[j]<arr[j+1]){
-                    var temp = arr[j]
-                    arr[j] = arr[j+1]
-                    arr[j+1] = temp
+        for (i in n-2 downTo  0){
+            var key = arr[i]
+            for (j in i+1 until n ){
+                if(arr[j] > key){
+                    arr[j-1] = arr[j]
+                }else{
+                    break
                 }
             }
+            arr[j-1] = key
         }
         return arr
     }
